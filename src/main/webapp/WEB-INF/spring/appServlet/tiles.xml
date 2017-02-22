@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="as" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+		<put-attribute name="tagline" value="" />
+		<put-attribute name="heading" value="" />
+		<put-attribute name="links" value="/WEB-INF/views/links.jsp" />
+
+	</definition>
+	<definition name="user.definition" template="/WEB-INF/views/userLayout.jsp">
+		<put-attribute name="title" value="as" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+		<put-attribute name="tagline" value="" />
+		<put-attribute name="heading" value="" />
+		<put-attribute name="userLinks" value="/WEB-INF/views/userLinks.jsp" />
+
+
+	</definition>
+	<definition name="user" extends="base.definition">
+		<put-attribute name="title" value="Zarządzaj Użytkownikami" />
+		<put-attribute name="body" value="/WEB-INF/views/user.jsp" />
+	</definition>
+	<definition name="apartment" extends="base.definition">
+		<put-attribute name="title" value="Zarządzaj Mieszkaniami" />
+		<put-attribute name="body" value="/WEB-INF/views/apartment.jsp" />
+	</definition>
+	<definition name="building" extends="base.definition">
+		<put-attribute name="title" value="Zarządzaj Budynkami" />
+		<put-attribute name="body" value="/WEB-INF/views/building.jsp" />
+	</definition>
+
+	<definition name="management" extends="base.definition">
+		<put-attribute name="title" value="Panel Administracyjny" />
+		<put-attribute name="body" value="/WEB-INF/views/management.jsp" />
+	</definition>
+		<definition name="makeCharges" extends="base.definition">
+		<put-attribute name="title" value="Zarządzaj opłatami" />
+		<put-attribute name="body" value="/WEB-INF/views/makeCharges.jsp" />
+	</definition>
+			<definition name="editCharges" extends="base.definition">
+		<put-attribute name="title" value="Zarządzaj opłatami" />
+		<put-attribute name="body" value="/WEB-INF/views/editCharges.jsp" />
+	</definition>
+				<definition name="editPassword" extends="base.definition">
+		<put-attribute name="title" value="Edytuj Hasło" />
+		<put-attribute name="body" value="/WEB-INF/views/editPassword.jsp" />
+	</definition>
+	
+	
+	<definition name="userPage" extends="user.definition">
+		<put-attribute name="title" value="Panel Użytkownika" />
+		<put-attribute name="body" value="/WEB-INF/views/userPage.jsp" />
+	</definition>
+	<definition name="userCharges" extends="user.definition">
+		<put-attribute name="title" value="Ureguluj swoje rachunki" />
+		<put-attribute name="body" value="/WEB-INF/views/userCharges.jsp" />
+	</definition>
+		<definition name="userPayment" extends="user.definition">
+		<put-attribute name="title" value="Ureguluj swoje rachunki" />
+		<put-attribute name="body" value="/WEB-INF/views/userPayment.jsp" />
+	</definition>
+	<definition name="userCounter" extends="user.definition">
+		<put-attribute name="title" value="Wprowadź dane z liczników" />
+		<put-attribute name="body" value="/WEB-INF/views/userCounter.jsp" />
+	</definition>
+		<definition name="userEditCounter" extends="user.definition">
+		<put-attribute name="title" value="Wprowadź dane z liczników" />
+		<put-attribute name="body" value="/WEB-INF/views/userEditCounter.jsp" />
+	</definition>
+	<definition name="userEditPassword" extends="user.definition">
+		<put-attribute name="title" value="Zmień hasło" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/userEditPassword.jsp" />
+	</definition>
+		<definition name="process" extends="user.definition">
+		<put-attribute name="title" value="Uregulowałeś swoje rachunki" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/process.jsp" />
+	</definition>
+</tiles-definitions>
